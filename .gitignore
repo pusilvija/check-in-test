@@ -1,0 +1,8 @@
+.venv/
+
+.idea/
+
+__pycache__/
+
+.env
+#config/settings_local.py

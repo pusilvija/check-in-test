@@ -1,0 +1,131 @@
+/* Background for index.html */
+.index-bg {
+    background: white url("images/index-bg.png") no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Background for detail.html */
+.detail-bg {
+    background: white url("images/detail-bg.jpeg") no-repeat;
+    background-size: cover;
+    height: 100vh;  /* Full viewport height */
+    margin: 0;  /* Remove any margin around the body */
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    text-align: center;
+    padding-top: 20px; /* Add some space from the top */
+}
+
+/* Style for the "Voting" heading */
+
+h1 {
+    font-size: 3em; /* Large font size */
+    color: #ffffff; /* White color for visibility */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Elegant font family */
+    font-weight: bold; /* Make the text bold */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Soft shadow effect */
+    margin-bottom: 30px; /* Add some space below the heading */
+    letter-spacing: 2px; /* Slightly increase spacing between letters */
+}
+
+
+/* Style for the list */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;  /* Spacing between each question box */
+}
+
+li {
+    background-color: rgba(255, 255, 255, 0.8); /* Light background with transparency */
+    padding: 20px;
+    border-radius: 10px;  /* Rounded corners */
+    border: 2px solid #ddd; /* Light border around the box */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for each question box */
+li:hover {
+    background-color: #f9f9f9;  /* Lighter background on hover */
+    transform: translateY(-5px);  /* Slightly move the box up */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);  /* Stronger shadow on hover */
+}
+
+/* Style for the links inside the question box */
+li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #6EC1EF;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Change link color on hover */
+li a:hover {
+    color: #4782A3; /* Darker blue when hovering over the link */
+}
+
+/* Normal button styling */
+.choice-button {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: white;
+    border: 2px solid #ddd;
+    padding: 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+
+    list-style: none;
+    margin: 20px;
+    display: block;
+    flex-direction: column;
+    gap: 20px;  /* Spacing between each question box */
+}
+
+
+/* Focus effect to visually highlight the button when clicked or tabbed */
+.choice-button:focus {
+    outline: none; /* Remove the default outline */
+    background-color: #4782A3; /* Darker blue when the button is focused */
+    transform: translateY(0); /* Maintain normal position */
+    box-shadow: 0px 0px 15px rgba(0, 123, 255, 0.5); /* Blue glowing outline effect */
+    opacity: 50%;
+}
+
+/* Hover effect for buttons */
+.choice-button:hover {
+    background-color: #D8B1E9;
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Background for results.html */
+.results-bg {
+    background: white url("images/results-bg.png") no-repeat;
+    background-size: cover;
+    height: 100vh;  /* Full viewport height */
+    margin: 0;  /* Remove any margin around the body */
+}

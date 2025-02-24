@@ -1,0 +1,24 @@
+li a {
+    color: green;
+}
+/*
+body {
+    background: white url("images/background.png") no-repeat;
+}
+*/
+/* Default Background */
+body {
+    background-image: url('/static/images/default-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Background for detail.html */
+.detail {
+    background-image: url('/static/images/detail.jpeg') !important;
+}
+
+/* Background for results.html */
+.results {
+    background-image: url('/static/images/results-bg.png') !important;
+}

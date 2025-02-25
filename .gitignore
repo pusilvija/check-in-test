@@ -5,4 +5,48 @@
 __pycache__/
 
 .env
-#config/settings_local.py
+##config/settings_local.py
+
+#
+## Ignore Python bytecode files
+#__pycache__/
+#*.py[cod]
+#
+## Ignore virtual environment directory
+#venv/
+#
+## Ignore SQLite database
+#db.sqlite3
+#
+## Ignore static files and collected static files
+#/static/
+#/staticfiles/
+#
+## Ignore environment variable files (e.g., .env)
+#.env
+#
+## Ignore IDE-specific files (e.g., PyCharm, VSCode)
+#.idea/
+#.vscode/
+#
+## Ignore Django migrations if you prefer to not include them (optional)
+## polls/migrations/
+#
+## Ignore local configuration files
+#*.log
+#
+## Ignore media files if any (depending on your project)
+#media/
+
+#__________
+#.env/
+#.venv/
+#env/
+#venv/
+#*.env
+#__pycache__/
+#
+#*.pyc
+#db.sqlite3
+#staticfiles/
+#________________

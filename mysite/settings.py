@@ -103,38 +103,34 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # For postgress railway
 
-# DATABASES = {
-#     'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
-# }
-
-# os.environ.setdefault("PGDATABASE", "checkintest_dev")
-# os.environ.setdefault("PGUSER", "checkintest_user")
-# os.environ.setdefault("PGPASSWORD", "fcIErpmTObQVrdtbXxYbgnYLrmEtYFPL")
-# os.environ.setdefault("PGHOST", "postgres.railway.internal")
-# os.environ.setdefault("PGPORT", "5432")
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv("PGDATABASE"),
-        'USER': os.getenv("PGUSER"),
-        'PASSWORD': os.getenv("PGPASSWORD"),
-        'HOST': os.getenv("PGHOST"),
-        'PORT': os.getenv("PGPORT"),
-    }
-}
 
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': os.environ["PGDATABASE"],
-#         'USER': os.environ["PGUSER"],
-#         'PASSWORD': os.environ["PGPASSWORD"],
-#         'HOST': os.environ["PGHOST"],
-#         'PORT': os.environ["PGPORT"],
+#         'NAME': os.getenv("PGDATABASE"),
+#         'USER': os.getenv("PGUSER"),
+#         'PASSWORD': os.getenv("PGPASSWORD"),
+#         'HOST': os.getenv("PGHOST"),
+#         'PORT': os.getenv("PGPORT"),
 #     }
 # }
 
+# Set default values for the environment variables if they’re not already set
+os.environ.setdefault("PGDATABASE", "checkintest_dev")
+os.environ.setdefault("PGUSER", "checkintest_user")
+os.environ.setdefault("PGPASSWORD", "checkintest")
+os.environ.setdefault("PGHOST", "localhost")
+os.environ.setdefault("PGPORT", "5432")
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ["PGDATABASE"],
+        'USER': os.environ["PGUSER"],
+        'PASSWORD': os.environ["PGPASSWORD"],
+        'HOST': os.environ["PGHOST"],
+        'PORT': os.environ["PGPORT"],
+}}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -170,11 +166,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/polls/static/'
 
 # For production, you would use this:
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"),
+                    os.path.join(BASE_DIR, "polls/static")]
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 

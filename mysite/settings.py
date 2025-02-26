@@ -109,6 +109,11 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 #     'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
 # }
 
+os.environ.setdefault("PGDATABASE", "checkintest_dev")
+os.environ.setdefault("PGUSER", "checkintest")
+os.environ.setdefault("PGPASSWORD", "checkintest")
+os.environ.setdefault("PGHOST", "localhost")
+os.environ.setdefault("PGPORT", "5432")
 
 DATABASES = {
     'default': {

@@ -186,19 +186,19 @@ INTERNAL_IPS = [
 
 TESTING = "test" in sys.argv
 
-if not TESTING:
-    MIDDLEWARE = [
-        "debug_toolbar.middleware.DebugToolbarMiddleware",
-        *MIDDLEWARE,
-        'django.middleware.security.SecurityMiddleware',
-        'whitenoise.middleware.WhiteNoiseMiddleware',
-        'django.contrib.sessions.middleware.SessionMiddleware',
-        'django.middleware.common.CommonMiddleware',
-        'django.middleware.csrf.CsrfViewMiddleware',
-        'django.contrib.auth.middleware.AuthenticationMiddleware',
-        'django.contrib.messages.middleware.MessageMiddleware',
-        'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    ]
+# if not TESTING:
+#     MIDDLEWARE = [
+#         "debug_toolbar.middleware.DebugToolbarMiddleware",
+#         *MIDDLEWARE,
+#         'django.middleware.security.SecurityMiddleware',
+#         'whitenoise.middleware.WhiteNoiseMiddleware',
+#         'django.contrib.sessions.middleware.SessionMiddleware',
+#         'django.middleware.common.CommonMiddleware',
+#         'django.middleware.csrf.CsrfViewMiddleware',
+#         'django.contrib.auth.middleware.AuthenticationMiddleware',
+#         'django.contrib.messages.middleware.MessageMiddleware',
+#         'django.middleware.clickjacking.XFrameOptionsMiddleware',
+#     ]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://check-in-test-production.up.railway.app',

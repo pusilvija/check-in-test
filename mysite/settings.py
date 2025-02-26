@@ -107,22 +107,33 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 #     'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
 # }
 
-os.environ.setdefault("PGDATABASE", "checkintest_dev")
-os.environ.setdefault("PGUSER", "checkintest_user")
-os.environ.setdefault("PGPASSWORD", "fcIErpmTObQVrdtbXxYbgnYLrmEtYFPL")
-os.environ.setdefault("PGHOST", "postgres.railway.internal")
-os.environ.setdefault("PGPORT", "5432")
+# os.environ.setdefault("PGDATABASE", "checkintest_dev")
+# os.environ.setdefault("PGUSER", "checkintest_user")
+# os.environ.setdefault("PGPASSWORD", "fcIErpmTObQVrdtbXxYbgnYLrmEtYFPL")
+# os.environ.setdefault("PGHOST", "postgres.railway.internal")
+# os.environ.setdefault("PGPORT", "5432")
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ["PGDATABASE"],
-        'USER': os.environ["PGUSER"],
-        'PASSWORD': os.environ["PGPASSWORD"],
-        'HOST': os.environ["PGHOST"],
-        'PORT': os.environ["PGPORT"],
+        'NAME': os.getenv["PGDATABASE"],
+        'USER': os.getenv["PGUSER"],
+        'PASSWORD': os.getenv["PGPASSWORD"],
+        'HOST': os.getenv["PGHOST"],
+        'PORT': os.getenv["PGPORT"],
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.environ["PGDATABASE"],
+#         'USER': os.environ["PGUSER"],
+#         'PASSWORD': os.environ["PGPASSWORD"],
+#         'HOST': os.environ["PGHOST"],
+#         'PORT': os.environ["PGPORT"],
+#     }
+# }
 
 
 # Password validation

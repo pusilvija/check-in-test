@@ -22,6 +22,14 @@ print("PGHOST:", os.environ.get("PGHOST"))
 print("PGPORT:", os.environ.get("PGPORT"))
 print("DATABASE_URL:", os.environ.get("DATABASE_URL"))
 
+print('ENGINE', 'django.db.backends.postgresql')
+print('NAME', os.environ["PGDATABASE"])
+print('USER', os.environ["PGUSER"])
+print('PASSWORD', os.environ["PGPASSWORD"])
+print('PORT', os.environ["PGPORT"])
+print('HOST', os.environ["PGHOST"])
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 

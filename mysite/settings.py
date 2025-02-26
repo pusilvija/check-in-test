@@ -15,11 +15,11 @@ import dj_database_url
 
 from pathlib import Path
 
-print("PGDATABASE:", os.environ.get("PGDATABASE"))
-print("PGPASSWORD:", os.environ.get("PGPASSWORD"))
-print("PGHOST:", os.environ.get("PGHOST"))
-print("PGPORT:", os.environ.get("PGPORT"))
-print("DATABASE_URL:", os.environ.get("DATABASE_URL"))
+# print("PGDATABASE:", os.environ.get("PGDATABASE"))
+# print("PGPASSWORD:", os.environ.get("PGPASSWORD"))
+# print("PGHOST:", os.environ.get("PGHOST"))
+# print("PGPORT:", os.environ.get("PGPORT"))
+# print("DATABASE_URL:", os.environ.get("DATABASE_URL"))
 
 # print('ENGINE', 'django.db.backends.postgresql')
 # print('NAME', os.environ.get("PGDATABASE"))
@@ -118,7 +118,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.environ["PGDATABASE"],
         'USER': os.environ["PGUSER"],
-        'PASSWORD': os.environ["POSTGRES_PASSWORD"],
+        'PASSWORD': os.environ["PGPASSWORD"],
         'HOST': os.environ["PGHOST"],
         'PORT': os.environ["PGPORT"],
     }

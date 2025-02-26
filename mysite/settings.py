@@ -109,7 +109,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 os.environ.setdefault("PGDATABASE", "checkintest_dev")
 os.environ.setdefault("PGUSER", "checkintest_user")
-os.environ.setdefault("PGPASSWORD", "checkintest")
+os.environ.setdefault("PGPASSWORD", "fcIErpmTObQVrdtbXxYbgnYLrmEtYFPL")
 os.environ.setdefault("PGHOST", "postgres.railway.internal")
 os.environ.setdefault("PGPORT", "5432")
 

@@ -17,7 +17,7 @@ from pathlib import Path
 
 print("PGDATABASE:", os.environ.get("PGDATABASE"))
 print("PGUSER:", os.environ.get("PGUSER"))
-print("PGPASSWORD:", os.environ.get("PGPASSWORD"))
+print("POSTGRES_PASSWORD:", os.environ.get("POSTGRES_PASSWORD"))
 print("PGHOST:", os.environ.get("PGHOST"))
 print("PGPORT:", os.environ.get("PGPORT"))
 print("DATABASE_URL:", os.environ.get("DATABASE_URL"))
@@ -25,7 +25,7 @@ print("DATABASE_URL:", os.environ.get("DATABASE_URL"))
 print('ENGINE', 'django.db.backends.postgresql')
 print('NAME', os.environ.get["PGDATABASE"])
 print('USER', os.environ.get["PGUSER"])
-print('PASSWORD', os.environ.get["PGPASSWORD"])
+print('PASSWORD', os.environ.get["POSTGRES_PASSWORD"])
 print('PORT', os.environ.get["PGPORT"])
 print('HOST', os.environ.get["PGHOST"])
 
@@ -104,21 +104,21 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # For postgress railway
 
-DATABASES = {
-    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
-}
-
-
 # DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': os.environ["PGDATABASE"],
-#         'USER': os.environ["PGUSER"],
-#         'PASSWORD': os.environ["PGPASSWORD"],
-#         'HOST': os.environ["PGHOST"],
-#         'PORT': os.environ["PGPORT"],
-#     }
+#     'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
 # }
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ["PGDATABASE"],
+        'USER': os.environ["PGUSER"],
+        'PASSWORD': os.environ["POSTGRES_PASSWORD"],
+        'HOST': os.environ["PGHOST"],
+        'PORT': os.environ["PGPORT"],
+    }
+}
 
 
 # Password validation

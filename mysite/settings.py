@@ -16,19 +16,17 @@ import dj_database_url
 from pathlib import Path
 
 print("PGDATABASE:", os.environ.get("PGDATABASE"))
-print("PGUSER:", os.environ.get("PGUSER"))
-print("POSTGRES_PASSWORD:", os.environ.get("POSTGRES_PASSWORD"))
+print("PGPASSWORD:", os.environ.get("PGPASSWORD"))
 print("PGHOST:", os.environ.get("PGHOST"))
 print("PGPORT:", os.environ.get("PGPORT"))
 print("DATABASE_URL:", os.environ.get("DATABASE_URL"))
 
-print('ENGINE', 'django.db.backends.postgresql')
-print('NAME', os.environ.get("PGDATABASE"))
-print('NAME', os.environ.get("PGDATABASE"))
-print('USER', os.environ.get("PGUSER"))
-print('PASSWORD', os.environ.get("POSTGRES_PASSWORD"))
-print('PORT', os.environ.get("PGPORT"))
-print('HOST', os.environ.get("PGHOST"))
+# print('ENGINE', 'django.db.backends.postgresql')
+# print('NAME', os.environ.get("PGDATABASE"))
+# print('NAME', os.environ.get("PGDATABASE"))
+# print('PASSWORD', os.environ.get("POSTGRES_PASSWORD"))
+# print('PORT', os.environ.get("PGPORT"))
+# print('HOST', os.environ.get("PGHOST"))
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -112,7 +110,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 os.environ.setdefault("PGDATABASE", "checkintest_dev")
 os.environ.setdefault("PGUSER", "checkintest")
 os.environ.setdefault("PGPASSWORD", "checkintest")
-os.environ.setdefault("PGHOST", "localhost")
+os.environ.setdefault("PGHOST", "postgres.railway.internal")
 os.environ.setdefault("PGPORT", "5432")
 
 DATABASES = {

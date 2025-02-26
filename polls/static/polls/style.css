@@ -1,3 +1,4 @@
+/* Background for index.html */
 .index-bg {
     background: white url("images/index-bg.png") no-repeat;
     background-size: cover;
@@ -11,6 +12,7 @@
     text-align: center;
 }
 
+/* Background for detail.html */
 .detail-bg {
     background: white url("images/detail-bg.jpeg") no-repeat;
     background-size: cover;

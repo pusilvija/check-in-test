@@ -170,3 +170,7 @@ if not TESTING:
         'django.contrib.messages.middleware.MessageMiddleware',
         'django.middleware.clickjacking.XFrameOptionsMiddleware',
     ]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://check-in-test-production.up.railway.app',
+]

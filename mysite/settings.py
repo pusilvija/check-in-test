@@ -15,6 +15,12 @@ import dj_database_url
 
 from pathlib import Path
 
+print("PGDATABASE:", os.environ.get("PGDATABASE"))
+print("PGUSER:", os.environ.get("PGUSER"))
+print("PGPASSWORD:", os.environ.get("PGPASSWORD"))
+print("PGHOST:", os.environ.get("PGHOST"))
+print("PGPORT:", os.environ.get("PGPORT"))
+print("DATABASE_URL:", os.environ.get("DATABASE_URL"))
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent

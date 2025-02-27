@@ -11,8 +11,23 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import sys
 import os
+import dj_database_url
 
 from pathlib import Path
+
+# print("PGDATABASE:", os.environ.get("PGDATABASE"))
+# print("PGPASSWORD:", os.environ.get("PGPASSWORD"))
+# print("PGHOST:", os.environ.get("PGHOST"))
+# print("PGPORT:", os.environ.get("PGPORT"))
+# print("DATABASE_URL:", os.environ.get("DATABASE_URL"))
+
+# print('ENGINE', 'django.db.backends.postgresql')
+# print('NAME', os.environ.get("PGDATABASE"))
+# print('NAME', os.environ.get("PGDATABASE"))
+# print('PASSWORD', os.environ.get("POSTGRES_PASSWORD"))
+# print('PORT', os.environ.get("PGPORT"))
+# print('HOST', os.environ.get("PGHOST"))
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +40,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-rmjd11x+j5i(+r#jc)o7$q1u-4puy53s!khwe$el5is))vj1u!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 

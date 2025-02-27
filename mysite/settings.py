@@ -40,7 +40,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-rmjd11x+j5i(+r#jc)o7$q1u-4puy53s!khwe$el5is))vj1u!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -104,17 +104,6 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # For postgress railway
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': os.getenv("PGDATABASE"),
-#         'USER': os.getenv("PGUSER"),
-#         'PASSWORD': os.getenv("PGPASSWORD"),
-#         'HOST': os.getenv("PGHOST"),
-#         'PORT': os.getenv("PGPORT"),
-#     }
-# }
-
 # Set default values for the environment variables if they’re not already set
 os.environ.setdefault("PGDATABASE", "checkintest_dev")
 os.environ.setdefault("PGUSER", "checkintest_user")
@@ -170,7 +159,7 @@ STATIC_URL = '/static/'
 
 # For production, you would use this:
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"),]
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 

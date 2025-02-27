@@ -1,6 +1,6 @@
 /* Background for index.html */
 .index-bg {
-    background: white url("images/index-bg.png") no-repeat;
+    background: white url("images/index-bg.jpg") no-repeat;
     background-size: cover;
     height: 100vh;
     margin: 0;

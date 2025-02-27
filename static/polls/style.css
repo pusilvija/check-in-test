@@ -1,3 +1,4 @@
+
 li a {
     color: green;
 }
@@ -7,14 +8,15 @@ body {
 }
 */
 
-/* Default background for index.html */
+/* Default background for index.html 8*/
 .index-bg {
     background: white url("../images/background.png") no-repeat;
     background-size: cover;
 }
 
-/* Background for detail.html */
+/* Background for detail.html*/
 .detail-bg {
     background: white url("../images/detail.jpeg") no-repeat;
     background-size: cover;
 }
+

@@ -40,6 +40,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-rmjd11x+j5i(+r#jc)o7$q1u-4puy53s!khwe$el5is))vj1u!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# DEBUG = os.environ.get("DEBUG", False)
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
@@ -158,7 +159,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # For production, you would use this:
-# STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "polls/static"),
                     os.path.join(BASE_DIR, "static")]
 # Default primary key field type

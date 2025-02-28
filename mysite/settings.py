@@ -27,6 +27,9 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = os.environ.get("DEBUG", False)
 # DEBUG = False
+DEBUG = os.getenv("DJANGO_DEBUG", "True")
+
+print("DEBUG: ", DEBUG)
 
 ALLOWED_HOSTS = ["*"]
 
@@ -154,11 +157,6 @@ INTERNAL_IPS = [
 ]
 
 TESTING = "test" in sys.argv
-
-DEBUG = True if TESTING else False
-# DEBUG = False if TESTING else True
-
-print(sys.argv)
 
 if not TESTING:
     MIDDLEWARE = [
